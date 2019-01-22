@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
+  get 'albums/show'
   devise_for :users
 
   authenticated :user do
     root to: "dashboard#index", as: :authenticated_root
     resources :search, only: [:index, :new], as: :searches
+    resources :categories, only: :show
+    resources :artists, only: :show
+    resources :albums, only: :show
   end
 
   unauthenticated :user do

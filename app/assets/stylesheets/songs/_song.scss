@@ -1,0 +1,19 @@
+.song-item {
+  border-top: 1px solid $white;
+  
+  .play-button {
+    margin-top: 12px;
+  }
+
+  .favorite {
+    margin-top: 10px;
+  }
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &.playing {
+    color: $primary;
+  }
+}
